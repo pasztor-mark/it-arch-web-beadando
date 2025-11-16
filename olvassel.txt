@@ -1,0 +1,7 @@
+Készítette: Pásztor Márk
+URL: -
+Téma: Flashcard/tanulókártyás web applikáció, saját definíciólista importálására és eredmények nyomon követésére tervezve.
+
+Külső források:
+- constants.tsx - a PROGRAMS array szöveges tartalma AI által lett generálva.
+- index.css - Háttér gradient a cssgradient.io oldalról lett kimásolva.

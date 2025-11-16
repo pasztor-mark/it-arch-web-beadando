@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply text-white
+  }
+  .text-highlight {
+    @apply text-orange-300
+  }
+  h3 {
+    @apply text-xl font-bold
+  }
+  h2 {
+    @apply text-2xl font-light
+  }
+  h1 {
+    @apply text-4xl font-semibold 
+  }
+  a {
+    @apply hover:cursor-pointer
+  }
+  footer {
+    @apply text-center bg-black/25 inline-flex flex-col gap-2 p-3 justify-center items-center  bottom-0 w-full backdrop-blur-xl
+  }
+  .disabled-bg {
+    @apply fixed h-screen w-screen backdrop-blur-xs top-0 transition-all duration-400 ease-out
+  }
+  .nav-aside {
+    @apply bg-neutral-900/90 rounded-l-xl w-24 fixed h-3/4 py-4 transition-all duration-300 top-1/6 z-50 ease-out 
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #423E35;
+  background: radial-gradient(circle, rgba(66, 62, 53, 1) 0%, rgba(8, 23, 31, 1) 100%);
+  /* Forrás: cssgradient.io */
+}
