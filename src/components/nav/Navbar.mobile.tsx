@@ -20,7 +20,7 @@ export default function MobileNavbar() {
     <aside className={`nav-aside ${isShown ? "right-0" : "-right-full"}`}>
         <nav className="flex flex-col justify-between h-full">
           {
-            PROGRAMS.map((p) => <MobileNavIcon props={p}/>)
+            PROGRAMS.map((p) => <MobileNavIcon key={p.title} props={p}/>)
           }
         </nav>
     </aside>
