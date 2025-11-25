@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { CATEGORIES, defaultVallgazdNotes } from "../lib/constants"
+import { CATEGORIES } from "../lib/constants"
 import { Category } from "../types/Category"
 import { getCustomCategories, getQuestions, saveAttempt } from "../lib/functions"
 import { Question } from "../types/Question"

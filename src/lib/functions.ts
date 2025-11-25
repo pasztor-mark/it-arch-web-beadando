@@ -61,8 +61,11 @@ export function getQuestions(): Question[] {
     return []
   }
   const serialized = window.localStorage.getItem("questions")
-  if (!serialized) return [];
-  const s2: string[] = serialized.split("###")
+  let s2: string[]
+  if (serialized && serialized.length > 3) {
+    s2 = serialized.split("###")
+  }
+  s2 = []
   try {
     return [...defaultVallgazdNotes, ...s2.map((s) => Question.deserializeFromString(s))]
   }
