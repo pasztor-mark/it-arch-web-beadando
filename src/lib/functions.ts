@@ -1,5 +1,7 @@
 import { Attempt } from "../types/Attempt"
 import { Category } from "../types/Category"
+import { Question } from "../types/Question"
+import { defaultVallgazdNotes } from "./constants"
 import { Difficulty } from "./enums"
 
 export function getCustomCategories(): Category[] {
@@ -8,7 +10,7 @@ export function getCustomCategories(): Category[] {
   }
   let categories: Category[] = []
 
-  let categoryStringArray = window.localStorage.getItem("categories")?.split("]") ?? []
+  const categoryStringArray = window.localStorage.getItem("categories")?.split("],") ?? []
   categoryStringArray.forEach((c) => {
     let deserialized = Category.deserializeFromString(c)
     console.log(c)
@@ -17,6 +19,10 @@ export function getCustomCategories(): Category[] {
     }
   })
   return categories
+}
+export function saveCategory(category: Category) {
+  const serialized = category.serializeToString();
+  window.localStorage.getItem("categories")?.concat(serialized);
 }
 export function saveAttempt(attempt: Attempt) {
   if (typeof window === "undefined") {
@@ -42,7 +48,28 @@ export function getAttempts(): Attempt[] {
     return []
   }
 }
+export function saveQuestion(question: Question) {
+  if (typeof window === "undefined") {
+    return null
+  }
+  const prevQuestions = getQuestions();
+  window.localStorage.setItem("questions", [...prevQuestions, question].map((q) => q.serializeToString!()).join("###"))
+}
 
+export function getQuestions(): Question[] {
+  if (typeof window === "undefined") {
+    return []
+  }
+  const serialized = window.localStorage.getItem("questions")
+  if (!serialized) return [];
+  const s2: string[] = serialized.split("###")
+  try {
+    return [...defaultVallgazdNotes, ...s2.map((s) => Question.deserializeFromString(s))]
+  }
+  catch (e) {
+    return []
+  }
+}
 export function getDifficultyColor(difficulty: Difficulty): string {
   switch (difficulty) {
     case (Difficulty.EASY):

@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react"
 import { CATEGORIES, defaultVallgazdNotes } from "../lib/constants"
 import { Category } from "../types/Category"
-import { getCustomCategories, saveAttempt } from "../lib/functions"
+import { getCustomCategories, getQuestions, saveAttempt } from "../lib/functions"
 import { Question } from "../types/Question"
 import QuestionCard from "../components/QuestionCard"
 import { QuestionResult } from "../types/QuestionResult"
 import { Attempt } from "../types/Attempt"
 
 export default function FlashcardsPage() {
-  const [defaultCategories, setDefaultCategories] = useState(CATEGORIES)
-  const [categoryPool, setCategoryPool] = useState<Category[]>(CATEGORIES)
-  const [defaultquestionPool] = useState<Question[]>(defaultVallgazdNotes)
-  const [questionPool, setQuestionPool] = useState<Question[]>(defaultVallgazdNotes)
+  const [defaultCategories, setDefaultCategories] = useState(getCustomCategories())
+  const [categoryPool, setCategoryPool] = useState<Category[]>(getCustomCategories())
+  const [defaultquestionPool, setDefaultQuestionPool] = useState<Question[]>(getQuestions())
+  const [questionPool, setQuestionPool] = useState<Question[]>(getQuestions())
 
   const [attemptResults, setAttemptResults] = useState<QuestionResult[]>([])
   const [minWeekSlider, setMinWeekSlider] = useState<number>(questionPool.flatMap((q) => q.uniWeek).sort((a, b) => a - b)[0]);
@@ -20,8 +20,10 @@ export default function FlashcardsPage() {
   useEffect(() => {
     if (defaultCategories == CATEGORIES) {
       let customCategories = getCustomCategories()
+      let customQuestions = getQuestions();
       setCategoryPool((pool) => pool.concat(customCategories))
       setDefaultCategories((pool) => pool.concat(customCategories))
+      setDefaultQuestionPool((pool) => pool.concat(customQuestions))
     }
   }, [])
 

@@ -12,7 +12,7 @@ export class Attempt {
   }
 
   serializeToString() {
-    return `${this.savedAt.getMilliseconds()}|${this.topics.join(";")}|${this.results.map((qr) => qr.serializeToString())}###`
+    return `${this.savedAt.getTime()}|${this.topics.join(";")}|${this.results.map((qr) => qr.serializeToString())}###`
   }
 
   static deserializeFromString(serialized: string): Attempt {

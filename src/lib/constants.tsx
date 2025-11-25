@@ -1,4 +1,4 @@
-import { FaArrowUpFromBracket, FaRankingStar, FaWandMagicSparkles } from "react-icons/fa6";
+import { FaArrowUpFromBracket, FaPencil, FaRankingStar } from "react-icons/fa6";
 import type { MenuCardProps } from "../types/MenuCardProps";
 import { FaCheckSquare, FaHome, FaIdCard, FaPlusCircle } from "react-icons/fa";
 import { Category } from "../types/Category";
@@ -28,7 +28,7 @@ export const PROGRAMS: MenuCardProps[] = [
     title: "Kártya hozzáadása",
     icon: <FaPlusCircle size={24} />,
     description: "Új flashcard rögzítése űrlappal – minden mező validálva van.",
-    href: "/add",
+    href: "/new/card",
   },
   {
     title: "Batch import JSON-ből",
@@ -37,10 +37,10 @@ export const PROGRAMS: MenuCardProps[] = [
     href: "/import",
   },
   {
-    title: "Definíciólista Importálása",
-    icon: <FaWandMagicSparkles size={24} />,
-    description: "Illeszd be a saját definícióidat, és konvertáld őket standard JSON formára.",
-    href: "/convert",
+    title: "Kategória szerkesztő",
+    icon: <FaPencil size={24} />,
+    description: "Definiáld a kategóriákat, amely szerint tanulhatsz.",
+    href: "/categories",
   },
   {
     title: "Eredmények",

@@ -13,10 +13,11 @@ export class Category {
     try {
       return new Category(
         serialized.split("[")[0],
-        serialized.split("[")[1].split(";"),
+        serialized.split("[")[1].replace("]", "").split(";")
+
       )
     }
-    catch(e) {
+    catch (e) {
       console.log(e)
       return null
     }
