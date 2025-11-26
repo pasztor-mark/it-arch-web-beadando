@@ -53,21 +53,27 @@ export function saveQuestion(question: Question) {
     return null
   }
   const prevQuestions = getQuestions();
-  window.localStorage.setItem("questions", [...prevQuestions, question].map((q) => q.serializeToString!()).join("###"))
+  window.localStorage.setItem("questions", [...prevQuestions, question].map((q) => `${q.id};${q.query};${q.answer};${q.topic};${q.uniWeek};${q.dateAdded.getTime()};${q.important};${q.difficulty};${q.labelColor}`).join("###"))
 }
 
 export function getQuestions(): Question[] {
   if (typeof window === "undefined") {
     return []
   }
-  const serialized = window.localStorage.getItem("questions")
+  const serialized = window.localStorage.getItem("questions") ?? ""
   let s2: string[]
   if (serialized && serialized.length > 3) {
     s2 = serialized.split("###")
   }
-  s2 = []
+  else {
+    localStorage.setItem("questions", defaultVallgazdNotes.map((q) => `${q.id};${q.query};${q.answer};${q.topic};${q.uniWeek};${q.dateAdded.getTime()};${q.important};${q.difficulty};${q.labelColor}`).join("###"))
+    s2 = []
+  }
   try {
-    return [...defaultVallgazdNotes, ...s2.map((s) => Question.deserializeFromString(s))]
+
+    return [...s2.map((s) => {
+      return Question.deserializeFromString(s)
+    })]
   }
   catch (e) {
     return []

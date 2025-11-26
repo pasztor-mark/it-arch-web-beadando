@@ -10,8 +10,11 @@
   h6 {
     @apply text-lg
   }
-  h4 {
+  h5 {
     @apply text-lg font-semibold
+  }
+  h4 {
+    @apply text-xl font-semibold
   }
   h3 {
     @apply text-xl font-bold
