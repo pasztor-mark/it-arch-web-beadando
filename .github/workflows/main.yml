@@ -28,6 +28,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Clean dist
+        uses: rm -rf dist
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
@@ -45,7 +47,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
-          path: './dist'
+          path: 'dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
