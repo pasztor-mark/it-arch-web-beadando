@@ -22,6 +22,9 @@ export default function ImportExportData() {
 
   return (
     <main className="mt-12 p-3 lg:mt-0 min-h-[80vh] relative">
+      <title>
+      Adatok kezelése
+      </title>
       <section className="flex justify-between mx-4 flex-col xl:flex-row">
         <article className="flex flex-col gap-4 xl:w-5/12">
           <h2>Jegyzetek konvertálása</h2>
@@ -72,7 +75,7 @@ export default function ImportExportData() {
           {/* részlegre forrás: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file */}
           <h3>JSON importálása</h3>
           <hr />
-          <h6>Fájlként</h6>
+          <label>Fájlként</label>
           <input type="file" accept="application/JSON" onChange={(e) => {
             readJsonFile(e)
           }} />

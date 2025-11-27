@@ -70,10 +70,12 @@ export default function NewFlashcardForm() {
   }, [query, answer, uniWeek, dateAdded, important, difficulty, color, selectedCategory, selectedTopic, currentTopics, selectedCategory, selectedTopic, currentTopics])
   return (
     <main className="max-h-[90vh] overflow-scroll flex flex-col xl:flex-row p-4 items-center gap-4 justify-between">
-
+<title>
+      Új tanulókártya
+      </title>
       <form action={""} onReset={() => {
         resetForm();
-      }} onSubmit={(e) => createQuestion(e)} className="flex flex-col xl:w-1/3 gap-4 ">
+      }} onSubmit={(e) => createQuestion(e)} className="flex flex-col w-11/12 xl:w-1/3 gap-4 ">
         <h2>Új kérdés hozzáadása</h2>
         <span>
           <label htmlFor="query">Kérdés</label>

@@ -16,6 +16,9 @@ export default function ResultsPage() {
   }, [])
   return (
     <main className="p-2 min-h-[80vh]">
+      <title>
+      Eredmények
+      </title>
       <h1 className="text-center mt-12 mb-12 lg:mt-0">Eredmények</h1>
       <section className="flex flex-col-reverse gap-4">
       {

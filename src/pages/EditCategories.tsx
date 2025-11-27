@@ -53,6 +53,9 @@ export default function EditCategories() {
       {/* 
         submit event: a kiválasztott kategóriának felülírja a szerkesztőben feltételesen módosított értékeit
       */}
+      <title>
+      Kategóriaszerkesztő
+      </title>
       <form onSubmit={() => {
         const newCategories = categories.map((c) =>
           c.title === selectedCategory?.title

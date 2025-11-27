@@ -8,6 +8,7 @@ import { QuestionResult } from "../types/QuestionResult"
 import { Attempt } from "../types/Attempt"
 
 export default function FlashcardsPage() {
+  //Mivel sok logika azonos a QuizPage.tsx logikájával, ezért az ott leírt magyarázatok itt is érvényesek.
   const [defaultCategories, setDefaultCategories] = useState(getCustomCategories())
   const [categoryPool, setCategoryPool] = useState<Category[]>(getCustomCategories())
   const [defaultquestionPool, setDefaultQuestionPool] = useState<Question[]>(getQuestions())
@@ -66,16 +67,20 @@ export default function FlashcardsPage() {
   }
   return (
     <main className="flex flex-col-reverse xl:flex-row">
+      <title>
+      Tanulókártyák
+      </title>
       <aside className="xl:basis-2/10 overflow-y-scroll max-h-[82vh] flex flex-col gap-4 rounded-t-xl xl:rounded-r-xl p-2 bg-black/30">
         <h2>Beállítások</h2>
         <p className="text-xs text-center text-red-200">A beállítások változtatása újraindítja a próbálkozást!</p>
         <hr />
         <h4>Hét filter: {minWeekSlider} - {maxWeekSlider}</h4>
         <div className="flex flex-col gap-2 sliderContainer">
-
-          <input type="range" min={1} max={maxWeekSlider} step={1} value={minWeekSlider} onChange={(e) => {
+          <label htmlFor="maxHet">Max hét</label>
+          <input name="maxHet" type="range" min={1} max={maxWeekSlider} step={1} value={minWeekSlider} onChange={(e) => {
             setMinWeekSlider(Number(e.currentTarget.value))
           }} />
+          <label htmlFor="minHet">Min. hét</label>
           <input type="range" min={minWeekSlider} max={12} step={1} value={maxWeekSlider} onChange={(e) => {
             setMaxWeekSlider(Number(e.currentTarget.value))
           }} />

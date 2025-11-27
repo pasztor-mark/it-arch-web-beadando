@@ -91,6 +91,9 @@ export default function QuizPage() {
 
   return (
     <main className="flex flex-col-reverse xl:flex-row relative">
+      <title>
+      Kvíz
+      </title>
       <p className="absolute top-2 right-4">{attemptResults.length}/{currentQuestionPool.length}</p>
       <p className="text-green-500 absolute top-8 right-4">{attemptResults.filter((q) => q.isCorrect).length}/{currentQuestionPool.length}</p>
 {/* a Flashcards.tsx oldalon megtalálható aside */}
@@ -100,10 +103,13 @@ export default function QuizPage() {
         <hr />
         <h4>Hét filter: {minWeekSlider} - {maxWeekSlider}</h4>
         <div className="flex flex-col gap-2 sliderContainer">
+          <label htmlFor="maxHet">Max hét</label>
 
           <input type="range" min={1} max={maxWeekSlider} step={1} value={minWeekSlider} onChange={(e) => {
             setMinWeekSlider(Number(e.currentTarget.value))
           }} />
+          <label htmlFor="minHet">Min. hét</label>
+
           <input type="range" min={minWeekSlider} max={12} step={1} value={maxWeekSlider} onChange={(e) => {
             setMaxWeekSlider(Number(e.currentTarget.value))
           }} />

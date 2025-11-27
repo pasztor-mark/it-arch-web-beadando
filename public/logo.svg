@@ -1,0 +1,26 @@
+<!-- Generálva ChatGPT-vel -->
+
+<!-- Prompt -->
+<!-- generate a card shaped svg with rounded edges and a slight light gray to white gradient with a 10deg tilt -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250" role="img" aria-labelledby="title desc">
+  <title id="title">Tilted card with subtle gray-to-white gradient</title>
+  <desc id="desc">A card-shaped rectangle with rounded corners, light gray to white gradient and a 10 degree tilt.</desc>
+
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6c6c6cff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.03"/>
+    </filter>
+  </defs>
+
+  <!-- center group rotated 10 degrees around the center of the canvas -->
+  <g transform="rotate(10 200 125)">
+    <!-- subtle border -->
+    <rect x="40" y="25" width="320" height="200" rx="16" ry="16" fill="url(#g)" stroke="#e6e9ec" stroke-width="1" filter="url(#softShadow)"/>
+  </g>
+</svg>

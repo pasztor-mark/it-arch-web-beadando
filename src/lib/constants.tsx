@@ -31,9 +31,9 @@ export const PROGRAMS: MenuCardProps[] = [
     href: "/new/card",
   },
   {
-    title: "Batch import JSON-ből",
+    title: "Import/export",
     icon: <FaArrowUpFromBracket size={24} />,
-    description: "Tölts fel egész kártyalistákat JSON formátumból egy lépésben.",
+    description: "Tölts fel egész kártyalistákat JSON formátumból egy lépésben, vagy mentsd el a jelenlegi adataid.",
     href: "/import",
   },
   {
