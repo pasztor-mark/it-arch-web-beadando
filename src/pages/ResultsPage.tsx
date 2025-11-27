@@ -18,7 +18,9 @@ export default function ResultsPage() {
     <main className="p-2 min-h-[80vh]">
       <h1 className="text-center mt-12 mb-12 lg:mt-0">Eredmények</h1>
       <section className="flex flex-col-reverse gap-4">
-
+      {
+        results.length === 0 && <h2 className="text-center">Még nincs megjeleníthető eredmény.</h2>
+      }
       {
         results.map((r) => {
         const ids = r.results.flatMap((q) => q.questionId)

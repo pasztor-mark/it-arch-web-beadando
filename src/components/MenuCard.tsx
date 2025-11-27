@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import type { MenuCardProps } from "../types/MenuCardProps";
 
 export default function MenuCard({program}: {program: MenuCardProps}) {
@@ -10,7 +11,7 @@ export default function MenuCard({program}: {program: MenuCardProps}) {
         {program.icon}
       </span>
       <p className="text-light">{program.description}</p>
-      <a className=" bg-orange-300/40 p-1 rounded-lg text-center text-lg" href={program.href}>Tovább</a>
+      <NavLink className=" bg-orange-300/40 p-1 rounded-lg text-center text-lg" to={program.href}>Tovább</NavLink>
     </div>
   )
 }

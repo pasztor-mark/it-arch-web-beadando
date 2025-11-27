@@ -64,7 +64,7 @@ export default function EditCategories() {
           newCategories.push(new Category(newCategoryName, newTopics))
         }
         //localstorage-be menthető stringként elmenti (kb ilyenkor jutott eszembe a json.stringify funkció de már túl sok időt öltem bele a saját serialize-olásba)
-        const serialized = newCategories.map((c) => c.serializeToString()).join(",")
+        const serialized = newCategories.map((c) => c.serializeToString()).join("")
         localStorage.setItem("categories", serialized)
       }} className="gap-2 m-auto flex flex-col p-4 xl:w-1/3 md:w-2/3 w-11/12">
         <span>
@@ -114,7 +114,6 @@ export default function EditCategories() {
                       const text = e.currentTarget.value
                       setTopicEditor((prev) => {
                         //ez a next dolog többször előfordul a kódban, ez indexváltoztatás nélkül settel egy értéket
-                        console.log(text)
                         const next = prev.slice();
                         next[index] = { def: def, updated: text };
                         return next;

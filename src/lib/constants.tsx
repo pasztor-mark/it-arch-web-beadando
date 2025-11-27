@@ -63,7 +63,7 @@ export const CATEGORIES: Category[] = [
       "VERSENY",
       "ERŐFORRÁSOK"
     ]
-  ),
+  ), 
   new Category(
 
     "Vállalatgazdaságtan",
@@ -87,7 +87,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A gazdasági rendszer a javak termelésének, elosztásának és fogyasztásának szervezett módja, amely a szűkös erőforrásokból való gazdálkodást és elosztást szervezi meg.",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#4CAF50"
@@ -98,7 +98,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Háztartások (fogyasztás és munkaerő), vállalatok (termelés, befektetés), állam (szabályozás, adózás), pénzügyi intézmények (hitelezés), nonprofit szervezetek (közhasznú célok) és érintettek (stakeholders).",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#4CAF50"
@@ -109,7 +109,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A piaci mechanizmusban a kereslet és kínálat diktálja az árakat, az árak jelzik a bőséget vagy hiányt, és a piacok koordinálják az elosztást.",
     "topic": "PIACI MECHANIZMUSOK",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#2196F3"
@@ -120,7 +120,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Sok eladó és vevő (egyik sem befolyásolja a piacot), homogén termékek, tökéletes információ, szabad belépés és kilépés, nincs külső befolyás.",
     "topic": "PIACFORMÁK ÉS VERSENY",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#FF9800"
@@ -131,7 +131,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A makroökonómia a gazdaság egészét vizsgálja (infláció, munkanélküliség), míg a mikroökonómia az egyes gazdasági szereplők döntéseit és piaci viselkedését elemzi.",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": false,
     "difficulty": 0,
     "labelColor": "#4CAF50"
@@ -142,7 +142,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Belső érintettek: tulajdonosok (tőke, profit), menedzserek (döntések), munkavállalók (bér, munkahely). Külső érintettek: vevők, beszállítók, hatóságok, versenytársak.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#9C27B0"
@@ -153,7 +153,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Olyan helyzet, amikor egyik fél sem tökéletesen tájékoztatott a másik céljairól, ami a megbízó-ügynök problémához vezethet.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": false,
     "difficulty": 1,
     "labelColor": "#9C27B0"
@@ -164,7 +164,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A neoklasszikus elmélethez tartozik, a vállalatokat input-outputként kezeli, a belső működéseket nem elemzi, tulajdonos által működtetett, termelési függvénnyel leírható.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 2,
     "labelColor": "#9C27B0"
@@ -175,7 +175,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Alapvető cél → Küldetés → Tartós célok → Irányítási célok → Operatív célok. Az egyéni és szervezeti célok kapcsolódnak egymáshoz.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 2,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#9C27B0"
@@ -186,7 +186,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Corporate Social Responsibility - vállalati társadalmi felelősség, amely a vállalat önkéntes elköteleződését jelenti a jólét fenntartható növekedése érdekében (pl. fair trade, közösségi projektek).",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 2,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": false,
     "difficulty": 0,
     "labelColor": "#9C27B0"
@@ -197,7 +197,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Egyéni vállalkozó, KKT (Közkereseti Társaság), BT (Betzéteti Társaság), RT (Részvénytársaság), KFT (Korlátolt Felelősségű Társaság), mind különböző tulajdonosi szerkezettel és felelősséggel.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 2,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#9C27B0"
@@ -208,7 +208,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A vállalat nem önálló, mindig a társadalom-környezet része, a vállalati működést a környezeti feltételek befolyásolják.",
     "topic": "VÁLLALAT MŰKÖDÉSE",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 2,
     "labelColor": "#9C27B0"
@@ -219,7 +219,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A piac eladók és vevők találkozása csere céljából, ahol a szerepek: eladó, vevő, versenytárs, partner.",
     "topic": "PIACI MECHANIZMUSOK",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#2196F3"
@@ -230,7 +230,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Jóléti funkció (választási lehetőség), allokációs funkció (erőforrás-áramlás), hatékonysági funkció (jobb, olcsóbb termelésre ösztönöz).",
     "topic": "PIACFORMÁK ÉS VERSENY",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#FF9800"
@@ -241,7 +241,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Jogi szabályozás, méretgazdaságosság, termékdifferenciálás, tőkeigény, kereskedelmi csatornákhoz való hozzáférés, partnerváltási költségek.",
     "topic": "PIACFORMÁK ÉS VERSENY",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#FF9800"
@@ -252,7 +252,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Két vagy több cég együttműködése. Pozitív: horizontális (azonos szint), vertikális (ellátási lánc). Negatív: kartell, ármegállapodás, bojkott.",
     "topic": "PIACFORMÁK ÉS VERSENY",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": false,
     "difficulty": 1,
     "labelColor": "#FF9800"
@@ -263,7 +263,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Földrajzi koncentráció azonos vagy összekapcsolódó profilú, magas versenyképességű vállalatok/intézmények hálózata (pl. Szilícium-völgy), ahol verseny és együttműködés együtt van jelen.",
     "topic": "PIACFORMÁK ÉS VERSENY",
     "uniWeek": 3,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#FF9800"
@@ -274,7 +274,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Hatékonyság (verseny feltételei), igazságosság (közművek, jövedelemelosztás), stabilitás (jog érvényesítése), infrastruktúra, szabályozás.",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 4,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#4CAF50"
@@ -285,7 +285,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Liberális állam (piaci koordináció), jóléti állam (piaci + állami koordináció), totális állam (központi irányítás).",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 4,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#4CAF50"
@@ -296,7 +296,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Világszintű gazdasági integráció, határok leépülése, ahol a tőke, technológia és információ mozgatóerői, fő szereplők a multinacionális vállalatok és nemzetközi szervezetek (WTO, IMF).",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 4,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#4CAF50"
@@ -307,7 +307,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A vállalat hosszú távú céljainak és azok eléréséhez szükséges lépéseknek tudatos, jövőre irányuló rendszere, amely tartalmazza a célokat, kereteket, elérési módokat és változtatás szabályait.",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#F44336"
@@ -318,7 +318,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Vállalati stratégia (egész szervezet) → Üzletági/versenystratégia (iparág) → Funkcionális stratégia (területek: HR, pénzügy stb.).",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#F44336"
@@ -329,7 +329,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Versenyhelyzet elemzése: versenytársak, új belépők, beszállítók, vevők, helyettesítő termékek. Célja az iparági vonzerő megértése.",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 2,
     "labelColor": "#F44336"
@@ -340,7 +340,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Value (érték - hozzájárul-e az értékteremtéshez), Rarity (ritkaság - mennyire egyedi), Imitability (másolhatóság - nehéz/költséges másolni), Organization (szervezet - támogatja-e a szervezet).",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 2,
     "labelColor": "#F44336"
@@ -351,7 +351,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Költségvezető (olcsó, hatékony működés), megkülönböztető (egyedi érték, minőség), fókuszáló (szűk célpiacra specializálódás).",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#F44336"
@@ -362,7 +362,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A vállalati tevékenységek rendszere, amely értéket hoz létre, kombinálva az ellátási lánccal és üzleti modellel.",
     "topic": "STRATÉGIA ÉS VERSENYKÉPESSÉG",
     "uniWeek": 5,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#F44336"
@@ -373,7 +373,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A vállalat fogyasztó-orientáltságát fejezi ki, tartalma a vállalat piaci kapcsolatait fejlesztő és megvalósító funkciók betöltése, központjában a fogyasztói értékteremtés áll.",
     "topic": "TERMELÉS ÉS ERŐFORRÁSOK",
     "uniWeek": 6,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#607D8B"
@@ -384,7 +384,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Funkcionális hasznosság (teljesítményérték, szolgáltatásérték), társadalmi-kulturális hasznosság (imázsérték, esztétikai érték) és a vevő ráfordításai (ár, idő, használati költség).",
     "topic": "TERMELÉS ÉS ERŐFORRÁSOK",
     "uniWeek": 6,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#607D8B"
@@ -395,7 +395,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "A piacnak a fogyasztók különböző tulajdonságú csoportjai szerinti felosztása (demográfiai, társadalmi, földrajzi, pszichográfiai szempontok alapján).",
     "topic": "TERMELÉS ÉS ERŐFORRÁSOK",
     "uniWeek": 6,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 1,
     "labelColor": "#607D8B"
@@ -406,7 +406,7 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Product (termékpolitika), Price (árpolitika), Place (értékesítési utak politikája), Promotion (kommunikációs politika).",
     "topic": "TERMELÉS ÉS ERŐFORRÁSOK",
     "uniWeek": 6,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": true,
     "difficulty": 0,
     "labelColor": "#607D8B"
@@ -428,9 +428,96 @@ export const defaultVallgazdNotes: Question[] = [
     "answer": "Robert Lucas elmélete, amely a monetarizmus és neoklasszikus gondolkodás elemeit ötvözi, feltételezve, hogy a gazdasági résztvevők racionális döntéseket hoznak.",
     "topic": "GAZDASÁGI ALAPFOGALMAK",
     "uniWeek": 1,
-    "dateAdded":new Date(2025, 11, 16),
+    "dateAdded": new Date(2025, 11, 16),
     "important": false,
     "difficulty": 2,
     "labelColor": "#4CAF50"
   }
 ]
+
+export const rawPromptJson = {
+  "categories": [{
+    "title": "string",
+    "topics": [
+      "string",
+      "string",
+      "..."
+    ]
+  }],
+  "questions": [
+    {
+      "id": 123,
+      "query": "string",
+      "answer": "string",
+      "topic": "string",
+      "uniWeek": 1,
+      "dateAdded": "isoDate",
+      "important": true,
+      "difficulty": 3,
+      "labelColor": "#FFFFFF"
+    }
+  ],
+  "attempts": [
+    {
+      "results": [{
+        "id": 456,
+        "questionId": 123,
+        "isCorrect": true
+      }
+      ],
+      "topics": [
+        "string",
+        "..."
+      ],
+      "savedAt": "isoDate"
+    }
+  ]
+
+}
+export const importPrompt = `
+A következő üzenetben nyers jegyzeteket fogok küldeni (különféle témák, kérdések, válaszok, megjegyzések).
+Kérlek, ezeket alakítsd át strikt módon a következő JSON-séma szerint, a mezőket automatikusan generálva vagy kiegészítve, ha szükséges:
+Letölthető JSON fájlban, vagy csak nyers JSON szöveget adj, parse-olva.
+{
+  "categories": [{
+    "title": "string",
+    "topics": ["string", "..."]
+  }],
+  "questions": [{
+    "id": number,
+    "query": "string",
+    "answer": "string",
+    "topic": "string",
+    "uniWeek": number,
+    "dateAdded": "ISODateString",
+    "important": boolean,
+    "difficulty": "enum(EASY|MEDIUM|HARD)",
+    "labelColor": "#FFFFFF"
+  }],
+  "attempts": [{
+    "results": [{
+      "id": number,
+      "questionId": number,
+      "isCorrect": boolean
+    }],
+    "topics": ["string", "..."],
+    "savedAt": "ISODateString"
+  }]
+}
+
+Instrukciók a feldolgozáshoz:
+- Automatikusan kategorizáld a témákat (categories → topics mezők).
+- Minden talált kérdés–válasz párból hozz létre egy objektumot a questions tömbben.
+- Ha nincs uniWeek, NE használj null-t, próbálj következtetni, vagy defaultolj 1-re.ü.
+- id mezők az epoch időből (getTime()) kinyert integer formáját követi, adj hozzá ilyesmit.
+- dateAdded és savedAt legyen ISO dátum (pl. 2025-03-21T10:32:00Z).
+- difficulty legyen kizárólag az enum egyik értéke: "EASY" | "MEDIUM" | "HARD".
+- Ha nem tudsz valamely mezőre következtetni:
+    important: false
+    difficulty: "MEDIUM"
+- labelColor generálható a téma alapján, vagy random. (default: "#FFFFFF").
+- Ne hagyj ki semmilyen információt, minden tartalmat ments el a JSON-ba.
+- A végén csak a valid JSON-t add vissza, magyarázat nélkül.
+
+A következő üzenetben küldöm a nyers anyagot.
+`

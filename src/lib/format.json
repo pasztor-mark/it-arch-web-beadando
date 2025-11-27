@@ -1,0 +1,39 @@
+{
+  "categories": [{
+    "title": "string",
+    "topics": [
+      "string",
+      "string",
+      "..."
+    ]
+  }],
+  "questions": [
+    {
+      "id": 123,
+      "query": "string",
+      "answer": "string",
+      "topic": "string",
+      "uniWeek": 1,
+      "dateAdded": "isoDate",
+      "important": true,
+      "difficulty": 3,
+      "labelColor": "#FFFFFF"
+    }
+  ],
+  "attempts": [
+    {
+      "results": [{
+        "id": 456,
+        "questionId": 123,
+        "isCorrect": true
+      }
+    ],
+    "topics": [
+      "string",
+      "..."
+    ],
+    "savedAt": "isoDate"
+    }
+  ]
+
+}

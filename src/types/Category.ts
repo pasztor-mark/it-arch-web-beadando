@@ -13,7 +13,7 @@ export class Category {
     try {
       return new Category(
         serialized.split("[")[0],
-        serialized.split("[")[1].replace("]", "").split(";")
+        serialized.split("[")[1].replaceAll("]", "").split(";")
 
       )
     }

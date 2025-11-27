@@ -1,7 +1,8 @@
 import { Attempt } from "../types/Attempt"
 import { Category } from "../types/Category"
 import { Question } from "../types/Question"
-import { defaultVallgazdNotes } from "./constants"
+import { QuestionResult } from "../types/QuestionResult"
+import { CATEGORIES, defaultVallgazdNotes } from "./constants"
 import { Difficulty } from "./enums"
 
 export function getCustomCategories(): Category[] {
@@ -10,11 +11,14 @@ export function getCustomCategories(): Category[] {
   }
   let categories: Category[] = []
 
-  const categoryStringArray = window.localStorage.getItem("categories")?.split("],") ?? []
+  let categoryStringArray = window.localStorage.getItem("categories")?.split("]") ?? []
+  categoryStringArray.pop()
   categoryStringArray.forEach((c) => {
     let deserialized = Category.deserializeFromString(c)
-    console.log(c)
     if (deserialized) {
+      if (deserialized.title.startsWith(",")) {
+        deserialized.title = deserialized.title.substring(1)
+      }
       categories.push(deserialized)
     }
   })
@@ -22,7 +26,9 @@ export function getCustomCategories(): Category[] {
 }
 export function saveCategory(category: Category) {
   const serialized = category.serializeToString();
-  window.localStorage.getItem("categories")?.concat(serialized);
+  const items = window.localStorage.getItem("categories") + serialized;
+  if (items)
+    localStorage.setItem("categories", items)
 }
 export function saveAttempt(attempt: Attempt) {
   if (typeof window === "undefined") {
@@ -61,6 +67,7 @@ export function getQuestions(): Question[] {
     return []
   }
   const serialized = window.localStorage.getItem("questions") ?? ""
+
   let s2: string[]
   if (serialized && serialized.length > 3) {
     s2 = serialized.split("###")
@@ -71,9 +78,9 @@ export function getQuestions(): Question[] {
   }
   try {
 
-    return [...s2.map((s) => {
-      return Question.deserializeFromString(s)
-    })]
+    return [...s2.map((s) =>
+      Question.deserializeFromString(s)
+    )]
   }
   catch (e) {
     return []
@@ -88,4 +95,67 @@ export function getDifficultyColor(difficulty: Difficulty): string {
     case (Difficulty.HARD):
       return "#ff1111";
   }
+}
+interface ParsedData {
+  categories: Category[];
+  questions: Question[];
+  attempts: Attempt[];
+}
+export function parseJsonToClasses(json: any): ParsedData {
+  const categories = (json.categories ?? []).map(
+    (c: any) => new Category(c.title, c.topics)
+  );
+
+  const questions = (json.questions ?? []).map(
+    (q: any) =>
+      new Question(
+        q.id,
+        q.query,
+        q.answer,
+        q.topic,
+        q.uniWeek ?? null,
+        q.dateAdded ? new Date(q.dateAdded) : new Date(),
+        q.important ?? false,
+        q.difficulty
+          ? q.difficulty === "EASY"
+            ? Difficulty.EASY
+            : q.difficulty === "MEDIUM"
+              ? Difficulty.MEDIUM
+              : Difficulty.HARD
+          : Difficulty.MEDIUM,
+        q.labelColor ?? "#FFFFFF"
+      )
+  );
+
+  const attempts = (json.attempts ?? []).map((a: any) => {
+    const results = (a.results ?? []).map(
+      (r: any) => new QuestionResult(r.id, r.questionId, r.isCorrect)
+    );
+    return new Attempt(results, a.topics ?? [], a.savedAt ? new Date(a.savedAt) : undefined);
+  });
+
+  return { categories, questions, attempts };
+}
+
+interface exportInterface {
+  "categories": Category[],
+  "questions": Question[]
+  "attempts": Attempt[]
+}
+export function exportToJson(questions: Question[], attempts: Attempt[], categories: Category[]) {
+
+  const truncatedCategories = categories.filter(
+    (c) => !CATEGORIES.some((def) => def.title === c.title)
+  )
+
+  const truncatedQuestions = questions.filter(
+    (q) => !defaultVallgazdNotes.some((def) => def.id === q.id)
+  )
+  const savedData: exportInterface = {
+    categories: truncatedCategories, questions: truncatedQuestions, attempts: attempts
+  }
+  const file = new Blob([JSON.stringify(savedData, null, 2)], {
+    type: "application/json"
+  })
+  return URL.createObjectURL(file)
 }

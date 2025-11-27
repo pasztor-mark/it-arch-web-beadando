@@ -9,7 +9,7 @@ import { emptyQuestionValidation, QuestionValidation, validateQuestion } from ".
 import ValidationMessage from "../components/ValidationMessage"
 
 export default function NewFlashcardForm() {
-  const [availableCategories, setAvailableCategories] = useState<Category[]>(CATEGORIES)
+  const [availableCategories, setAvailableCategories] = useState<Category[]>(getCustomCategories())
 
   const [query, setQuery] = useState<string>("")
   const [answer, setAnswer] = useState<string>("")
@@ -40,8 +40,6 @@ export default function NewFlashcardForm() {
       query, answer, selectedTopic, uniWeek, dateAdded, important, difficulty, color
     )
     if (QuestionValidation.isValid(validationResult) === true) {
-      console.log(QuestionValidation.isValid(validationResult))
-      
       setValidation(emptyQuestionValidation)
       saveQuestion(question)
       return

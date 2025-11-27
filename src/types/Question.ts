@@ -22,7 +22,7 @@ export class Question {
     this.difficulty = difficulty ?? Difficulty.MEDIUM
     this.labelColor = labelColor ?? "#423e35"
   }
-  serializeToString() {
+  serializeToString?() {
     return `${this.id};${this.query};${this.answer};${this.topic};${this.uniWeek};${this.dateAdded.getTime()};${this.important};${this.difficulty};${this.labelColor}###`
   }
   static deserializeFromString(serialized: string) : Question {

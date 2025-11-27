@@ -25,7 +25,7 @@ export default function FlashcardsPage() {
       setDefaultCategories((pool) => pool.concat(customCategories))
       setDefaultQuestionPool((pool) => pool.concat(customQuestions))
     }
-  }, [])
+  }, [defaultquestionPool])
 
 
   function shuffleCards(): void {
