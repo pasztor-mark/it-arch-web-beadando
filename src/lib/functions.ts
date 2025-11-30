@@ -2,8 +2,8 @@ import { Attempt } from "../types/Attempt"
 import { Category } from "../types/Category"
 import { Question } from "../types/Question"
 import { QuestionResult } from "../types/QuestionResult"
-import { CATEGORIES, defaultVallgazdNotes } from "./constants"
 import { Difficulty } from "./enums"
+import { CATEGORIES, defaultVallgazdNotes } from "./notes"
 
 export function getCustomCategories(): Category[] {
   if (typeof window === "undefined") {

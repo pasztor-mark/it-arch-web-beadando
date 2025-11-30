@@ -4,55 +4,72 @@
   body {
     @apply text-white
   }
+
   .text-highlight {
     @apply text-orange-300
   }
+
   h6 {
     @apply text-lg
   }
+
   h5 {
     @apply text-lg font-semibold
   }
+
   h4 {
     @apply text-xl font-semibold
   }
+
   h3 {
     @apply text-xl font-bold
   }
+
   h2 {
     @apply text-2xl font-light
   }
+
   h1 {
-    @apply text-4xl font-semibold 
+    @apply text-4xl font-semibold
   }
+
   a, button {
     @apply hover:cursor-pointer
   }
+
   footer {
-    @apply text-center bg-black/25 inline-flex flex-col gap-2 p-3 justify-center items-center  bottom-0 w-full backdrop-blur-xl
+    @apply text-center bg-black/25 inline-flex flex-col gap-2 p-3 justify-center items-center bottom-0 w-full backdrop-blur-xl
   }
+
   .disabled-bg {
     @apply fixed h-screen w-screen backdrop-blur-xs top-0 transition-all duration-400 ease-out
   }
+
   .nav-aside {
-    @apply bg-neutral-900/90 rounded-l-xl w-24 fixed h-3/4 py-4 transition-all duration-300 top-1/6 z-50 ease-out 
+    @apply bg-neutral-900/90 rounded-l-xl w-24 fixed h-3/4 py-4 transition-all duration-300 top-1/6 z-50 ease-out
   }
+
   input, textarea, select {
     @apply bg-black/30 rounded-xl shadow-lg shadow-orange-300/30 p-1
   }
-  form > span {
-    @apply flex flex-col gap-2 
+
+  form>span {
+    @apply flex flex-col gap-2
   }
+
   label {
     @apply text-lg font-light
   }
+
   .validation-active {
     @apply text-red-500 font-light text-sm
   }
+
   .validation-inactive {
     @apply text-transparent font-light text-sm
   }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -85,12 +102,16 @@ html {
 
 *::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 3px;  
+  border-radius: 3px;
+}
+
+#fullscreen-clock {
+  background: #242424;
+  background: linear-gradient(0deg, rgba(36, 36, 36, 0.7) 0%, rgba(0, 0, 0, 1) 90%);
 }
 
 @supports not selector(::-webkit-scrollbar) {
   html {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }

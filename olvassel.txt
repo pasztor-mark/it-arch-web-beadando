@@ -14,3 +14,6 @@ Külső források:
 - QuizPage.tsx: Fisher-Yates shuffle: https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
   - Alternatív shuffle funkció: https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript
 - logo.svg: ChatGPT által generált SVG grafika
+- StudyClock.tsx: fullscreen: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
+  - Screen wake lock: https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API
+  - megjegyzés: mobil nézetben el van rejtve.

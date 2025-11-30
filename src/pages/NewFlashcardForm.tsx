@@ -1,12 +1,12 @@
 import { useEffect, useState, type FormEvent } from "react"
 import { Category } from "../types/Category"
-import { CATEGORIES } from "../lib/constants"
 import { Difficulty } from "../lib/enums"
 import QuestionCard from "../components/QuestionCard"
 import { Question } from "../types/Question"
 import { getCustomCategories, saveQuestion } from "../lib/functions"
 import { emptyQuestionValidation, QuestionValidation, validateQuestion } from "../types/QuestionValidation"
 import ValidationMessage from "../components/ValidationMessage"
+import { CATEGORIES } from "../lib/notes"
 
 export default function NewFlashcardForm() {
   const [availableCategories, setAvailableCategories] = useState<Category[]>(getCustomCategories())

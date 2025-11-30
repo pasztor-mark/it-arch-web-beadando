@@ -1,10 +1,9 @@
 import MenuCard from "../components/MenuCard";
 import { PROGRAMS } from "../lib/constants";
+import StudyClock from "../components/StudyClock";
 
-export default function Home() {
+export default function Home() {  
   return (
-
-
     <main className='p-3 mt-14 lg:mt-4 min-h-screen'>
       <header className='flex flex-col gap-4 mb-6 text-center lg:text-justify'>
         <h1>Gazdaságinformatika Tanulókártyák</h1>
@@ -26,6 +25,8 @@ export default function Home() {
           <p className="text-justify text-lg">A programot azért hoztam létre, mert nem akartam kiadni havi Quizlet előfizetésre, csak hogy JSON formátumból tudjak importálni definíciókat, plusz jó gyakorlás webfejlesztésre.</p>
         </article>
       </section>
+      <StudyClock/>
+
     </main>
   )
 

@@ -8,11 +8,11 @@ import NewFlashcardForm from "./pages/NewFlashcardForm"
 import EditCategories from "./pages/EditCategories"
 import { useEffect } from "react"
 import { getCustomCategories } from "./lib/functions"
-import { CATEGORIES } from "./lib/constants"
 import { Category } from "./types/Category"
 import QuizPage from "./pages/QuizPage"
 import ResultsPage from "./pages/ResultsPage"
 import ImportExportData from "./pages/ImportExportData"
+import { CATEGORIES } from "./lib/notes"
 
 function App() {
   useEffect(() => {

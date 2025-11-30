@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { CATEGORIES } from "../lib/constants"
 import { Category } from "../types/Category"
 import { getCustomCategories, getQuestions, saveAttempt } from "../lib/functions"
 import { Question } from "../types/Question"
 import QuestionCard from "../components/QuestionCard"
 import { QuestionResult } from "../types/QuestionResult"
 import { Attempt } from "../types/Attempt"
+import { CATEGORIES } from "../lib/notes"
 
 export default function FlashcardsPage() {
   //Mivel sok logika azonos a QuizPage.tsx logikájával, ezért az ott leírt magyarázatok itt is érvényesek.
