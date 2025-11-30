@@ -3,8 +3,17 @@ URL: https://pasztor-mark.github.io/it-arch-web-beadando
 Téma: Flashcard/tanulókártyás web applikáció, saját definíciólista importálására és eredmények nyomon követésére tervezve.
 Javítási segédlet: segedlet.md
 Felhasznált font: Roboto (https://fonts.google.com/specimen/Roboto)
+
+- Futtatás:
+cd (beadandó mappa neve)
+$ (beadandó mappa neve) | npm i
+$ (beadandó mappa neve) | npm run dev 
+dev általában localhost:5173/it-arch-web-beadando/ alatt elérhető, itt van hot reload ha valamit változtatni akarunk
+rendes buildért lásd: URL
+
+
 Külső források:
-- Ikonok: https://react-icons.github.io/react-icons/icons/fa6/
+- Ikonok: https://react-icons.github.io/react-icons
 - constants.tsx: a PROGRAMS array szöveges tartalma AI által lett generálva, valamint a default értékek AI által lettek feldolgozva saját anyagból.
 - index.css: Háttér gradient a cssgradient.io oldalról lett kimásolva.
   - Scrollbar: scrollbar.app
@@ -17,3 +26,5 @@ Külső források:
 - StudyClock.tsx: fullscreen: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
   - Screen wake lock: https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API
   - megjegyzés: mobil nézetben el van rejtve.
+
+
