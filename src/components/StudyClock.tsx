@@ -15,7 +15,6 @@ export default function StudyClock() {
   return (
 
     <section id="fullscreen-clock" className="hidden lg:flex h-screen relative justify-center items-center">
-      <h2 className="py-4">Tanulást segítő óra</h2>
 
       <button className="absolute top-3 right-3" onClick={async () => {
         const clock = document.getElementById("fullscreen-clock")
