@@ -19,11 +19,9 @@ export default function Home() {
         }
       </section>
       <hr className="my-6 text-highlight" />
-      <section className="mx-auto lg:w-2/3">
-        <article>
+      <section className="mx-auto lg:w-2/3 my-5">
           <h3 className="text-highlight">Az oldalról</h3>
           <p className="text-justify text-lg">A programot azért hoztam létre, mert nem akartam kiadni havi Quizlet előfizetésre, csak hogy JSON formátumból tudjak importálni definíciókat, plusz jó gyakorlás webfejlesztésre.</p>
-        </article>
       </section>
       <StudyClock/>
 

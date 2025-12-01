@@ -4,6 +4,13 @@ Téma: Flashcard/tanulókártyás web applikáció, saját definíciólista impo
 Javítási segédlet: segedlet.md
 Felhasznált font: Roboto (https://fonts.google.com/specimen/Roboto)
 
+Felhasznált keretrendszerek:
+- Vite
+- React
+- TypeScript
+- Tailwind
+
+
 - Futtatás:
 cd (beadandó mappa neve)
 $ (beadandó mappa neve) | npm i
